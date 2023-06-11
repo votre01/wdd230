@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Fraunces&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root {
+    --primary-color: #040F16;
+    --secondary-color: #0B4F6C;
+    --accent1-color: #01BAEF;
+    --accent2-color: #B80C09;
+    --accent3-color: #FBFBFF;
+  
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Fraunces', serif;
+  
+    --nav-background-color: #0B4F6C;
+    --nav-link-color: #FBFBFF;
+    --nav-hover-link-color: #FBFBFF;
+    --nav-hover-background-color: #040F16;
+  }
+
+  body {
+    max-width: 960px;
+    padding: 20px;
+    font-family: var(--paragraph-font);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);    
+  }
+
+  header {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent3-color);        
+  }
+
+  p {
+    padding: 20px;
+  }
+
+  nav {
+    background-color: var(--nav-background-color);
+    font-family: var(--heading-font);
+    font-weight: 100;
+    font-size: 1rem;
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  
+  nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }
+
+  .pallet-image {
+    max-width: 320px;
+    height: auto;
+  }
+

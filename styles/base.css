@@ -18,7 +18,7 @@ body {
 }
 
 header,
-nav,
+.navigation,
 main,
 footer {
     display: grid;
@@ -43,33 +43,63 @@ header img {
     max-width: 100px;
     height: auto;
     margin: 1rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: right;
+    padding: .5rem .75rem;
+    background-color: var(--green-tint);
+    color: var(--gray-tint);
 
 }
 
-nav {
+#menu::before {
+    content: "≡";
+}
+
+.navigation {
     background-color: var(--secondary-color);
     font-size: 1.2rem
 }
 
-nav ul {
+.navigation ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-nav a {
-    display: block;
-    color: var(--green-tint);
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;    
+.navigation li {
+    display: none;
 }
 
-nav a:active,
-nav a:hover {
+.navigation a {
+    display: block;
+    color: var(--green-tint);
+    text-align: left;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem)    
+}
+
+.navigation a:active,
+.navigation a:hover {
     background-color: var(--main-color);
     color: var(--secondary-color);
     font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
 }
 
 main {

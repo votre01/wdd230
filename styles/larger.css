@@ -8,13 +8,22 @@
         box-shadow: 4px 4px 16px 2px #1f1f1f;
     }
 
-    nav ul {
+    #menu {
+        display: none;
+    }
+
+    .navigation ul {
         display: flex;
         justify-content: space-around;
     }
 
-    nav li {
-        width: 100%;
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
     }
 
     main {

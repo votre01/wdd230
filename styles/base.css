@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Outfit&display=swap');
-
 :root {
     --main-color: #f5cb5c;
     --secondary-color: #242423;
@@ -105,6 +103,14 @@ header img {
 main {
     max-width: 90%;
     margin: 0 auto;
+}
+
+#mode {
+	/* position: absolute; */
+	top: 1rem;
+	right: 2rem;
+	font-size: 2rem;
+	cursor: pointer;
 }
 
 main h2 {

@@ -1,0 +1,45 @@
+@media screen and (min-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .mainLogo {
+        max-width: 100px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;        
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+
+    /*
+     * Main content sections styling
+     */
+
+    main .mainContent {
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        gap: 1rem;
+        max-width: 80%
+    }
+
+    main h2,
+    .info {
+        grid-column: 1 / 4;
+    }
+}

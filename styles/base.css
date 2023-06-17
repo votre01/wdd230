@@ -15,6 +15,10 @@ body {
     margin: 0 auto;
 }
 
+/*
+ * Header and main navigation styling
+ */
+
 header,
 .navigation,
 main,
@@ -52,7 +56,6 @@ header img {
     padding: .5rem .75rem;
     background-color: var(--green-tint);
     color: var(--gray-tint);
-
 }
 
 #menu::before {

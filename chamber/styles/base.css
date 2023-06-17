@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Fraunces&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root {
+    --main-color: #040F16;
+    --secondary-color: #0B4F6C;
+    --accent1: #01BAEF;
+    --accent2: #B80C09;
+    --accent3: #FBFBFF;
+
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Fraunces', serif;
+}
+
+/*
+ * Header and main navigation styling
+ */
+
+ body {
+    font-family: var(--paragraph-font);
+ }
+
+ h1, h2, h3, h4, h5, h6, a {
+    font-family: var(--heading-font);
+ }
+
+header,
+.navigation,
+footer {
+    display: grid;
+    grid-template-columns: 1fr;    
+    box-sizing: border-box;  
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--accent3);
+}
+
+header h1 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.mainLogo {
+    max-width: 60px;
+    height: auto;
+    padding: 1rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: right;
+    padding: .5rem .75rem;
+    background-color: var(--secondary-color);
+    color: var(--accent3);
+}
+
+#menu::before {
+    content: "≡";
+}
+
+.navigation {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    color: var(--accent3);
+    text-align: left;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem)    
+}
+
+.navigation a:active,
+.navigation a:hover {
+    background-color: var(--accent2);
+    font-weight: 700;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/*
+ * Main content sections styling
+ */
+
+.hero img {
+    width: 100%;
+}
+
+main .mainContent {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 100%;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem;
+    color: var(--accent3);
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+

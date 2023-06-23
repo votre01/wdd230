@@ -103,6 +103,25 @@ header img {
     content: "X";
 }
 
+.hero {
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light-tint);
+    font-size: 1.2em;
+    text-shadow: 0 0 3px #000000;
+}
+
 main {
     max-width: 90%;
     margin: 0 auto;
@@ -147,6 +166,12 @@ main h2 {
 
 .card div {
     padding: 1rem;
+}
+
+iframe {
+    padding-top: 1rem;
+    margin: 0 ;
+    width: 100%;
 }
 
 footer {

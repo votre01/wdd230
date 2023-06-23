@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive images learning activity example page">
+    <meta name="author" content="Trevor Ngwenya">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    <title>WDD 230 - Responsive Images</title>
+</head>
+<body>
+    <main>    
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="barranquilla colombia temple" width="1500" height="750">
+            </picture>
+        </div>
+    </main>   
+</body>
+</html>

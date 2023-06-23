@@ -41,3 +41,19 @@ modeButton.addEventListener('click', () => {
         modeButton.textContent = '☑️';
     }
 });
+
+// Local storage - page visit counter
+
+const pageVisits = document.querySelector('#pageVisits');
+let visitCount = 0;
+
+window.addEventListener('load', function() {
+    if (!localStorage.getItem('siteVisits')) {
+        localStorage.setItem('siteVisits', 1);
+    } else {
+        visitCount = localStorage.getItem('siteVisits');
+        visitCount++;
+        this.localStorage.setItem('siteVisits', visitCount);
+        pageVisits.textContent = `Page visits: ${localStorage.getItem('siteVisits')}`;
+    }
+});

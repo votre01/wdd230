@@ -44,4 +44,24 @@
     .info {
         grid-column: 1 / 4;
     }
+
+    .discover {
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        max-width: 80%;
+    }
+
+    .discover section {
+        grid-column: 2 / 6;
+        max-width: 600px;
+    }
+
+    .discover aside {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        /* background-color: var(--accent2); */
+        /* color: var(--accent3); */
+        padding: 1rem;
+        margin: 1rem;
+    }    
 }

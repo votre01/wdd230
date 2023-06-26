@@ -18,10 +18,15 @@
 
  body {
     font-family: var(--paragraph-font);
+    margin: 0;
  }
 
  h1, h2, h3, h4, h5, h6, a {
     font-family: var(--heading-font);
+ }
+
+ figure {
+    margin: 0;
  }
 
 header,
@@ -121,11 +126,44 @@ main .mainContent {
 
 .card {
     max-width: 100%;
+    /* padding: 1rem; */
+    margin: 1rem auto;
+    box-shadow: 4px 4px 8px 4px #cecece;
+    border: 1px solid #cecece;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
+}
+
+.card p,
+.card h3 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.card h3 {
+    background-color: var(--accent2);
+    color: var(--accent3);
+}
+
+figcaption {
+    padding: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 100;
+}
+
+.discover {
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.asideCard {
+    border-bottom: 1px solid #cecece;
 }
 
 footer {

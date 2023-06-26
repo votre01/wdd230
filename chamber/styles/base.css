@@ -166,6 +166,18 @@ figcaption {
     border-bottom: 1px solid #cecece;
 }
 
+.asideCard img {
+    max-width: 100%;
+    height: auto;
+}
+
+#welcomeMessage {
+    padding: 1rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
 footer {
     background-color: var(--secondary-color);
     text-align: center;

@@ -44,5 +44,10 @@
 
     .card {
         box-shadow: 4px 4px 16px 2px #9b9b9b;
-    } 
+    }
+    
+    form label.top input, form label.top select {
+        max-width: 20rem;
+        background-color: rgba(0, 0, 0, .1);
+    }
 }

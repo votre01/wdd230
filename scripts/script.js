@@ -57,3 +57,16 @@ window.addEventListener('load', function() {
         pageVisits.textContent = `Page visits: ${localStorage.getItem('siteVisits')}`;
     }
 });
+
+
+
+const rangevalue = document.getElementById("rangevalue");
+const range = document.getElementById("rating");
+
+// RANGE event listener
+range.addEventListener('change', displayRatingValue);
+range.addEventListener('input', displayRatingValue);
+
+function displayRatingValue() {
+    rangevalue.innerHTML = range.value;
+}

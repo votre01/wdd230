@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harare Chamber of Commerce | Trevor Ngwenya - Chamber of WDD 230 | Web Frontend Development</title>
+    <meta name="description" content="This is the Chamber of Commerce Home page for the WDD 230 - Web Frontend Development course by Trevor Ngwenya">
+    <meta name="author" content="Trevor Ngwenya">
+    <meta property="og:title" content="Trevor Ngwenya - Chamber of Commerce Home page - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://assets.churchofjesuschrist.org/48/48/48486471b5a0cf657e59c4bcb7cb66b6e80fc0fe/apia_samoa_temple_lds.jpeg">
+    <meta property="og:url" content="https://votre01.github.io/wdd230/">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img class="mainLogo" src="images/business-icon.png" alt="Harare chamber of commerce logo">
+        <h1>Harare Chamber of Commerce</h1>               
+    </header>
+
+    <a href="#" id="menu"></a>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html" title="Home" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Member Information</legend>
+                <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
+                <label class="top">Last Name* <input type="text" id="lname" name="lname" required></label>
+                <label class="top">Title <input type="text" id="title" name="title"></label>
+                <label class="top">Email* <input type="email" name="email" required></label>
+                <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">Organization* <input type="text" id="organization" name="organization" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Funding</legend>
+                <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
+                <label class="top">Membership Level
+                    <select name="subject">
+                        <option value="">Select Membership &#9662</option>
+                        <option value="np">NP (Non-profit Free)</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+            </fieldset>
+            
+            <input type="submit" value="Join Chamber" class="submitBtn">
+
+        </form>
+          
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> 😀Trevor Ngwenya 😀Zimbabwe</p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>

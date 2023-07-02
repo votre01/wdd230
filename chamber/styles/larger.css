@@ -70,4 +70,11 @@
         opacity: 0.7;
         background-color: var(--main-color);
     }
+    form {
+        max-width: 70%;
+    }
+
+    form label.top input, form label.top select {
+        width: 60%;
+    }
 }

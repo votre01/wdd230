@@ -33,6 +33,10 @@ function checkSame() {
 	}
 }
 
+const now = new Date();
+const timestampField = document.querySelector("#timestamp");
+timestampField.value = now.toISOString();
+
 // Store latest visit date on local storage
 
 if (!localStorage.getItem('lastV')) {

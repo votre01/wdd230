@@ -88,6 +88,12 @@
     .join .benefits {
         grid-column: 3 / 4;
         grid-row: 2;
+        width: 100%;
+    }
+
+    .join .thanks {
+        grid-column: 1 / 5;
+        font-size: 1.5rem;
     }
 
     form label.top input, form label.top select {

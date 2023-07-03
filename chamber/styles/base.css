@@ -187,10 +187,14 @@ figcaption {
 .join h1 {
     border-bottom: 1px solid;
     padding-bottom: 2rem;
+    width: 90%;
+    margin: 2rem auto;
 }
+
 .join form {
     width: 90%;
-    margin: 0 auto;
+    margin: 2rem auto;
+
 }
 
 .join .benefits {
@@ -198,7 +202,13 @@ figcaption {
     color: var(--accent3);
     padding: 1rem;
     border-radius: .5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.join .thanks {
     width: 90%;
+    padding: 1rem;
     margin: 0 auto;
 }
 

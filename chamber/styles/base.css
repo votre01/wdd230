@@ -232,7 +232,13 @@ form label.top, form div {
     font-size: .8rem;
 }
 
-form label.top input, form label.top select {
+form label.top textarea {
+    -webkit-appearance: none;
+    display: block;
+    width: 86%;
+}
+
+form label.top input, form label.top select, form label.top textarea {
     -webkit-appearance: none;
     display: block;
     font-size: 1rem;

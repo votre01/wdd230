@@ -50,7 +50,8 @@
                 <legend>Member Information</legend>
                 <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
                 <label class="top">Last Name* <input type="text" id="lname" name="lname" required></label>
-                <label class="top"><div id="titleMessage"></div>Title <input type="text" id="title" name="title"></label>
+                <div class="top" id="titleMessage"></div>
+                <label class="top">Title <input type="text" id="title" name="title"></label>
                 <label class="top">Email* <input type="email" name="email" required></label>
                 <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234" required></label>
                 <label class="top">Organization* <input type="text" id="organization" name="organization" required></label>
@@ -60,14 +61,15 @@
                 <legend>Membership Selection</legend>
                 <label class="top">Membership Level
                     <select name="subject">
-                        <option value="">Select Membership &#9662</option>
+                        <option value="">Select Membership &#9662;</option>
                         <option value="np">NP (Non-profit Free)</option>
                         <option value="bronze">Bronze</option>
                         <option value="silver">Silver</option>
                         <option value="gold">Gold</option>
                     </select>
                 </label>
-                <label class="top">Describe your business <input type="textarea" id="description" name="description"></label>
+                <label class="top">Describe your business<textarea id="description" name="description"></textarea></label>
+                
                 <label class="top"><input type="hidden" id="timestamp" name="timestamp"></label>
             </fieldset>
             

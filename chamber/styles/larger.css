@@ -96,7 +96,7 @@
         font-size: 1.5rem;
     }
 
-    form label.top input, form label.top select {
+    form label.top input, form label.top select, form label.top textarea {
         width: 60%;
     }
 }

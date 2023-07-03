@@ -33,21 +33,31 @@
         </ul>
     </nav>
     
-    <main>
+    <main class='join'>
+        <h1>Join Harare Chamber of Commerce</h1>
+        <div class="benefits">
+            <h3>Membership Benefits</h3>
+            <p>Our Chamber is committed to supporting the growth and success of businesses in our community. We believe that by working together, we can create a stronger local economy that benefits everyone. Whether you are a small business owner or part of a larger corporation, our chamber offers a variety of benefits to businesses. Some of the benefits include: </p>
+            <ul>
+                <li>Discounts on fitness, travel, dining, and shows.</li>
+                <li>Referrals and networking opportunities.</li>
+                <li>Group insurance plan for small to midsize businesses, which offers health and dental insurance, among other products and services, with flexible, stable, and affordable rates.</li>
+            </ul>
+        </div>
+
         <form method="get" action="thanks.html">
             <fieldset>
                 <legend>Member Information</legend>
                 <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
                 <label class="top">Last Name* <input type="text" id="lname" name="lname" required></label>
-                <label class="top">Title <input type="text" id="title" name="title"></label>
+                <label class="top"><div id="titleMessage"></div>Title <input type="text" id="title" name="title"></label>
                 <label class="top">Email* <input type="email" name="email" required></label>
                 <label class="top">Phone <input type="tel" name="phone" placeholder="1235551234" required></label>
                 <label class="top">Organization* <input type="text" id="organization" name="organization" required></label>
             </fieldset>
 
             <fieldset>
-                <legend>Funding</legend>
-                <label class="top">Anticipated Completion Date <input type="date" name="completeDate"></label>
+                <legend>Membership Selection</legend>
                 <label class="top">Membership Level
                     <select name="subject">
                         <option value="">Select Membership &#9662</option>
@@ -57,6 +67,8 @@
                         <option value="gold">Gold</option>
                     </select>
                 </label>
+                <label class="top">Describe your business <input type="textarea" id="description" name="description"></label>
+                <label class="top"><input type="hidden" id="timestamp" name="timestamp"></label>
             </fieldset>
             
             <input type="submit" value="Join Chamber" class="submitBtn">
@@ -69,5 +81,6 @@
         <p>&copy;<span id="year"></span> 😀Trevor Ngwenya 😀Zimbabwe</p>
         <p id="lastModified">Last Modified: </p>
     </footer>
+
     <script src="scripts/script.js"></script>
 </body>

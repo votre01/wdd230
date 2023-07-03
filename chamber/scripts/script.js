@@ -12,6 +12,26 @@ hambuttom.addEventListener('click', () => {
     hambuttom.classList.toggle('show');
 });
 
+// Check if title matches regex
+const userTitle = document.querySelector('#title');
+const titleMessage = document.querySelector('#titleMessage');
+const regex = /^[a-zA-Z\s-]{7,}$/;
+
+userTitle.addEventListener("focusout", checkSame);
+function checkSame() {
+	if (!regex.test(userTitle.value)) {
+		titleMessage.textContent = "*Title should contain at least 7 alpha characters!";
+		titleMessage.style.color = "red";
+		titleMessage.style.visibility = "show";
+		userTitle.style.backgroundColor = "#fff0f3";
+		userTitle.value = "";
+		userTitle.focus();
+	} else {
+		titleMessage.style.display = "none";
+		userTitle.style.backgroundColor = "#fff";
+		userTitle.style.color = "#000";
+	}
+}
 
 // Store latest visit date on local storage
 
@@ -28,7 +48,7 @@ if (!localStorage.getItem('lastV')) {
     if (daysSinceVisit < 1) {
         welcomeMessage.textContent = 'Back so soon! Awesome!';        
     } else {
-        welcomeMessage.textContent = `You last visited ${daysSinceVisit} days ago.`;         
+        welcomeMessage.textContent = `You last visited ${daysSinceVisit} days ago.`;
     }
       
     localStorage.setItem('lastV', (currentDate));

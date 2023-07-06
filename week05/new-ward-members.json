@@ -1,0 +1,23 @@
+{
+    "familyName" : "Ngwenya",
+    "moveInDate" : "June 06, 2023",
+    "numberOfRecords" : 3,
+    "visitedByBishopric" : true,
+    "familyMembers" : [
+        {
+            "name" : "Trevor",
+            "gender" : "Male",
+            "birthDate" : "November 5, 1990"
+        },
+        {
+            "name" : "Talent",
+            "gender" : "Male",
+            "birthDate" : "November 18, 1993"
+        },
+        {
+            "name" : "Felicity",
+            "gender" : "Female",
+            "birthDate" : "April 20, 2003"
+        }
+    ]
+}

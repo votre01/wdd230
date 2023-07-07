@@ -12,7 +12,12 @@ async function getProphetData(url) {
 
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
-        cards.innerHTML = `<h1>${prophet.name}</h1>`;
+        const card = document.createElement('div');
+        card.innerHTML = `<h2>${prophet.name} ${prophet.lastname}</h2>
+                          <p>Date of birth: ${prophet.birthdate}</p>
+                          <p>Place of birth: ${prophet.birthplace}</p>
+                          <img src="${prophet.imageurl}" alt="${prophet.name} ${prophet.lastname}">`;
+        cards.append(card);
     });
 }
 

@@ -176,6 +176,14 @@ iframe {
     width: 100%;
 }
 
+#weatherInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
 .subp {
     grid-column: 1 / 3;
 }

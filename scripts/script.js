@@ -42,6 +42,32 @@ modeButton.addEventListener('click', () => {
     }
 });
 
+// Get weather
+const weatherInfo = document.querySelector('#weatherInfo');
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.78&lon=6.59&units=imperial&appid=4eb999e92d892ed7069e6c7aec3abf13';
+
+async function fetchWeatherApi() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      displayResults(data);
+      console.log(data);
+    } else {
+        throw Error(await response.text());
+    }
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+const displayResults = (weather) => {
+    weatherInfo.innerHTML = `<img src="https://openweathermap.org/img/w/${weather.weather[0].icon}.png" alt="${weather.weather[0].main}"> <span>${weather.main.temp}&#8457; - ${weather.weather[0].description}</span>`;
+};
+
+fetchWeatherApi();
+
 // Local storage - page visit counter
 
 const pageVisits = document.querySelector('#pageVisits');

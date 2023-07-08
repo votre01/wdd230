@@ -4,6 +4,8 @@
  * Date: 06 July 2023
  */
 
+// -17.83129568510987, 31.05410106805462
+
 // Set dates
 const currentYear = document.querySelector('#year');
 const lastModified = document.querySelector('#lastModified');
@@ -45,7 +47,7 @@ modeButton.addEventListener('click', () => {
 // Get weather
 const weatherInfo = document.querySelector('#weatherInfo');
 
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.78&lon=6.59&units=imperial&appid=4eb999e92d892ed7069e6c7aec3abf13';
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-17.83&lon=31.05&units=imperial&appid=4eb999e92d892ed7069e6c7aec3abf13';
 
 async function fetchWeatherApi() {
   try {

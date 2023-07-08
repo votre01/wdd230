@@ -4,8 +4,6 @@
  * Date: 06 July 2023
  */
 
-// -17.83129568510987, 31.05410106805462
-
 // Set dates
 const currentYear = document.querySelector('#year');
 const lastModified = document.querySelector('#lastModified');

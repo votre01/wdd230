@@ -1,0 +1,39 @@
+{
+    "members" : [
+        {    
+            "name" : "Trevor Ngwenya",
+            "address": "22 Lawson, Milton Park",
+            "phone" : "0771728515",
+            "website" : "https://votre01.github.io/wdd230/",
+            "profilePic" : "images/maleProfile.webp",
+            "membershipLevel" : "Non-Profit"
+        },
+
+        {    
+            "name" : "Trevor Ngwenya",
+            "address": "22 Lawson, Milton Park",
+            "phone" : "0771728515",
+            "website" : "https://votre01.github.io/wdd230/",
+            "profilePic" : "images/maleProfile.webp",
+            "membershipLevel" : "Silver"
+        },
+
+        {    
+            "name" : "Trevor Ngwenya",
+            "address": "22 Lawson, Milton Park",
+            "phone" : "0771728515",
+            "website" : "https://votre01.github.io/wdd230/",
+            "profilePic" : "images/maleProfile.webp",
+            "membershipLevel" : "Bronze"
+        },
+
+        {    
+            "name" : "Trevor Ngwenya",
+            "address": "22 Lawson, Milton Park",
+            "phone" : "0771728515",
+            "website" : "https://votre01.github.io/wdd230/",
+            "profilePic" : "images/maleProfile.webp",
+            "membershipLevel" : "Gold"
+        }
+    ]
+}

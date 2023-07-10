@@ -44,18 +44,20 @@ async function getMemberData(url) {
     if (response.ok) {
         const data = await response.json();
         console.log(data);
-        displayMembers(data);
+        displayMembers(data.members);
     }
 }
 
-const displayMembers = (members) => {
-    const directoryCard = document.createElement('div');
-    members.members.forEach(member => {
-        directoryCard.innerHTML = 
-        `<h3>${member.name}</h3>`;
-
+const displayMembers = (members) => {    
+    members.forEach((member) => {
+        const directoryCard = document.createElement('div');
+        directoryCard.innerHTML = `<img src="${member.profileImg}" title="${member.name}">
+                                   <h3>${member.name}</h3>
+                                   <p>${member.address}</p>
+                                   <p>${member.phone}</p>
+                                   <a href="${member.website}" target="_blank">Website</a>`;
         directory.append(directoryCard);
-    });        
+    });
 };
 
 getMemberData(membersUrl);

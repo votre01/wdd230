@@ -6,6 +6,13 @@ const welcomeMessage = document.querySelector('#welcomeMessage');
 const currentDate = new Date();
 const msToDays = 84600000;
 
+const userTitle = document.querySelector('#title');
+const titleMessage = document.querySelector('#titleMessage');
+const regex = /^[a-zA-Z\s-]{7,}$/;
+
+const directory = document.querySelector('#directory');
+const membersUrl = 'https://votre01.github.io/wdd230/chamber/data/members.json';
+
 // Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
 hambuttom.addEventListener('click', () => {
     mainnav.classList.toggle('show');
@@ -13,11 +20,8 @@ hambuttom.addEventListener('click', () => {
 });
 
 // Check if title matches regex
-const userTitle = document.querySelector('#title');
-const titleMessage = document.querySelector('#titleMessage');
-const regex = /^[a-zA-Z\s-]{7,}$/;
+// userTitle.addEventListener("focusout", checkSame);
 
-userTitle.addEventListener("focusout", checkSame);
 function checkSame() {
 	if (!regex.test(userTitle.value)) {
 		titleMessage.textContent = "*Title should contain at least 7 alpha characters!";
@@ -33,12 +37,35 @@ function checkSame() {
 	}
 }
 
+
+// Get member data
+async function getMemberData(url) {
+    const response = await fetch(membersUrl);
+    if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        displayMembers(data);
+    }
+}
+
+const displayMembers = (members) => {
+    const directoryCard = document.createElement('div');
+    members.members.forEach(member => {
+        directoryCard.innerHTML = 
+        `<h3>${member.name}</h3>`;
+
+        directory.append(directoryCard);
+    });        
+};
+
+getMemberData(membersUrl);
+
+// Local Storage
 const now = new Date();
 const timestampField = document.querySelector("#timestamp");
 timestampField.value = now.toISOString();
 
 // Store latest visit date on local storage
-
 if (!localStorage.getItem('lastV')) {
     welcomeMessage.textContent = 'Welcome! Let us know if you have any questions.';
     localStorage.setItem('lastV', JSON.stringify(currentDate));
@@ -60,17 +87,4 @@ if (!localStorage.getItem('lastV')) {
 
 function getLastVisitDate() {
     return localStorage.getItem('lastV');
-}
-
-// Get member data
-
-const url = 'https://votre01.github.io/wdd230/chamber/data/members.json';
-
-async function getMemberData(url) {
-    const response = await fetch(url);
-    if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        displayLinks(data);
-    }
 }

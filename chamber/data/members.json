@@ -10,29 +10,29 @@
         },
 
         {    
-            "name" : "Trevor Ngwenya",
+            "name" : "Peter Tichagwa",
             "address": "22 Lawson, Milton Park",
-            "phone" : "0771728515",
+            "phone" : "5557286600",
             "website" : "https://votre01.github.io/wdd230/",
             "profilePic" : "images/maleProfile.webp",
             "membershipLevel" : "Silver"
         },
 
         {    
-            "name" : "Trevor Ngwenya",
+            "name" : "Norman Zigomo",
             "address": "22 Lawson, Milton Park",
-            "phone" : "0771728515",
+            "phone" : "5551700015",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/maleProfile.webp",
+            "profilePic" : "images/male-profile.webp",
             "membershipLevel" : "Bronze"
         },
 
         {    
-            "name" : "Trevor Ngwenya",
+            "name" : "Tendai Tasiya",
             "address": "22 Lawson, Milton Park",
-            "phone" : "0771728515",
+            "phone" : "555928505",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/maleProfile.webp",
+            "profilePic" : "images/female-profile.webp",
             "membershipLevel" : "Gold"
         }
     ]

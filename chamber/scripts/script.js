@@ -51,8 +51,9 @@ async function getMemberData(url) {
 const displayMembers = (members) => {    
     members.forEach((member) => {
         const directoryCard = document.createElement('div');
-        directoryCard.innerHTML = `<img src="${member.profileImg}" title="${member.name}">
+        directoryCard.innerHTML = `<img src="${member.profilePic}" title="${member.name}">
                                    <h3>${member.name}</h3>
+                                   <p>${member.membershipLevel}
                                    <p>${member.address}</p>
                                    <p>${member.phone}</p>
                                    <a href="${member.website}" target="_blank">Website</a>`;

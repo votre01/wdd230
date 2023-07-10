@@ -19,11 +19,11 @@
         },
 
         {    
-            "name" : "Norman Zigomo",
+            "name" : "Nolwazi Zigomo",
             "address": "09 Langley Drive, Mt Pleasant",
             "phone" : "5551710715",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/male-profile.webp",
+            "profilePic" : "images/female-profile.webp",
             "membershipLevel" : "Bronze"
         },
 
@@ -41,7 +41,7 @@
             "address": "56 George Road, Highlands",
             "phone" : "555922801",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/female-profile.webp",
+            "profilePic" : "images/male-profile.webp",
             "membershipLevel" : "Gold"
         },
 
@@ -50,7 +50,7 @@
             "address": "10 Bingley, Asdown Park",
             "phone" : "5557226801",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/male-profile.webp",
+            "profilePic" : "images/female-profile.webp",
             "membershipLevel" : "Silver"
         },
 
@@ -68,7 +68,7 @@
             "address": "67 May Road, Graystone Park",
             "phone" : "5557286600",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/male-profile.webp",
+            "profilePic" : "images/female-profile.webp",
             "membershipLevel" : "Silver"
         },
 
@@ -82,11 +82,11 @@
         },
 
         {    
-            "name" : " George",
+            "name" : "Elena Green",
             "address": "98 Aloha Drive, Mainland Park",
             "phone" : "5557282319",
             "website" : "https://votre01.github.io/wdd230/",
-            "profilePic" : "images/male-profile.webp",
+            "profilePic" : "images/female-profile.webp",
             "membershipLevel" : "Silver"
         }
     ]

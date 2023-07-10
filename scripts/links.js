@@ -10,9 +10,19 @@ async function getLinksData(url) {
     const response = await fetch(url);
     if (response.ok) {
         const data = await response.json();
-        console.table(data);
-        // setLinks(data.links);
+        console.log(data);
+        displayLinks(data);
     }
+}
+
+const displayLinks = (weeks) => {
+    weeks.forEach(week => {
+        const weekLinks = document.createElement('li');
+        week.forEach(item => {
+            weekLinks.append(item);
+        });
+        lessonLinks.append(weekLinks);         
+    });
 }
 
 getLinksData(linksURL);

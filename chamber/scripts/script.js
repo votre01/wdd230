@@ -53,7 +53,7 @@ const displayMembers = (members) => {
         const directoryCard = document.createElement('div');
         directoryCard.innerHTML = `<img src="${member.profilePic}" title="${member.name}">
                                    <h3>${member.name}</h3>
-                                   <p>${member.membershipLevel}
+                                   <p>⭐${member.membershipLevel}⭐</p>
                                    <p>${member.address}</p>
                                    <p>${member.phone}</p>
                                    <a href="${member.website}" target="_blank">Website</a>`;

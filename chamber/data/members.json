@@ -69,7 +69,7 @@
             "phone" : "5557286600",
             "website" : "https://votre01.github.io/wdd230/",
             "profilePic" : "images/female-profile.webp",
-            "membershipLevel" : "Silver"
+            "membershipLevel" : "Bronze"
         },
 
         {    
@@ -87,7 +87,7 @@
             "phone" : "5557282319",
             "website" : "https://votre01.github.io/wdd230/",
             "profilePic" : "images/female-profile.webp",
-            "membershipLevel" : "Silver"
+            "membershipLevel" : "Gold"
         }
     ]
 }

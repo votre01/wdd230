@@ -16,11 +16,12 @@ async function getLinksData(url) {
 }
 
 const displayLinks = (weeks) => {
-    weeks.forEach(week => {
+    weeks.weeks.forEach(week => {
         const weekLinks = document.createElement('li');
-        week.forEach(item => {
-            weekLinks.append(item);
-        });
+            weekLinks.innerHTML = `${week.week} `;
+            week.links.forEach(link => {
+                weekLinks.innerHTML += ` | <a href="${link.url}">${link.title}</a>`;
+            });
         lessonLinks.append(weekLinks);         
     });
 }

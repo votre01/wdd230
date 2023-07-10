@@ -79,6 +79,15 @@
             "website" : "https://votre01.github.io/wdd230/",
             "profilePic" : "images/male-profile.webp",
             "membershipLevel" : "Silver"
+        },
+
+        {    
+            "name" : " George",
+            "address": "98 Aloha Drive, Mainland Park",
+            "phone" : "5557282319",
+            "website" : "https://votre01.github.io/wdd230/",
+            "profilePic" : "images/male-profile.webp",
+            "membershipLevel" : "Silver"
         }
     ]
 }

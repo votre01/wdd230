@@ -12,6 +12,7 @@ const regex = /^[a-zA-Z\s-]{7,}$/;
 
 const directory = document.querySelector('#directory');
 const membersUrl = 'https://votre01.github.io/wdd230/chamber/data/members.json';
+const dirToggle = document.querySelector('#dirToggle');
 
 // Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
 hambuttom.addEventListener('click', () => {
@@ -45,6 +46,22 @@ async function getMemberData(url) {
         const data = await response.json();
         console.log(data);
         displayMembers(data.members);
+    }
+}
+
+
+// Toggle List/Grid view directory
+dirToggle.addEventListener('click', toggleDirectoryView);
+
+function toggleDirectoryView() {
+    if (dirToggle.textContent == 'List View') {
+        directory.classList.remove('dirGrid');
+        directory.classList.add('dirList');
+        dirToggle.textContent = 'Grid View';        
+    } else {
+        directory.classList.remove('dirList');        
+        directory.classList.add('dirGrid');
+        dirToggle.textContent = 'List View';
     }
 }
 

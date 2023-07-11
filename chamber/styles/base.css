@@ -273,13 +273,30 @@ form datalist {
     color: var(--secondary-color);
 }
 
-#directory {
+#dirToggle {
+    display: flex;
+    width: 10%;
+    background-color: var(--accent2);
+    margin: 1rem 0;
+    padding: .5rem;
+    color: var(--accent3);
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    border-right: 8px solid var(--secondary-color);
+}
+
+#dirToggle a {
+    text-decoration: none;
+}
+
+.dirGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
 }
 
-#directory div {
+.dirGrid div {
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -288,18 +305,18 @@ form datalist {
     padding: 1rem 1rem 0 1rem;
 }
 
-#directory img{
+.dirGrid img{
     max-width: 200px;
     width: 100%;
     height: auto;
     border-radius: .5rem;
 }
 
-#directory p {
+.dirGrid p {
     margin: .2rem;
 }
 
-#directory a {
+.dirGrid a {
     text-align: center;
     text-decoration: none;
     color: var(--accent3);
@@ -309,8 +326,42 @@ form datalist {
     margin: 1rem 0 0 0;
 }
 
-#directory a:hover {
+.dirGrid a:hover {
     background-color: var(--accent1);
+}
+
+.dirList {
+    display: grid;
+    grid-template-columns: repeat( minmax(100%, 1fr));
+    row-gap: 1rem;
+}
+
+.dirList div {
+    background-color: var(--secondary-color);
+    color: var(--accent3);
+    padding: 1rem;
+    border-bottom: 8px solid var(--accent2);
+}
+
+.dirList p {
+        margin: .2rem;
+}
+
+.dirList img {
+    float: left;
+    margin: 1rem;
+    width: 8rem;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.dirList a {
+    text-decoration: none;
+    color: var(--accent1);
+}
+
+.dirList a:hover {
+    color: var(--accent3);
 }
 
 footer {

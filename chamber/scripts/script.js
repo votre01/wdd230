@@ -78,43 +78,74 @@ async function getMemberData(url) {
         const data = await response.json();
         console.log(data);
         displayMembers(data.members, directory);
-        // spotlight(data.members);
+        spotlight(data.members);
     }
 }
 
 
 function spotlight(members) {
-    const selection1 = assignSelection(members, selection1);
-    const selection2 = assignSelection(members, selection2);
+    spotlightMembers = [];
+    members.forEach(member => {
+        if (member.membershipLevel == 'Silver' || member.membershipLevel == 'Gold') {
+            spotlightMembers.push(member);
+        }        
+    });
+    console.log(spotlightMembers);
+    const selection1 = assignSelection(spotlightMembers);
+    const selection2 = assignSelection(spotlightMembers);
 
-    const selectedMembers = [members[selection1], members[selection2]];
-    displayMembers(selectedMembers, spotSelection);
+    const selectedMembers = [spotlightMembers[selection1], spotlightMembers[selection2]];
+    displaySpotlight(selectedMembers);
 }
 
-const assignSelection = (members, selection) => {
-    let memberIndex = Math.floor(Math.random() * members.length) + 1;
+const assignSelection = (members) => {
+    let memberIndex = Math.floor(Math.random() * members.length-1) + 1;
 
-    if (members[memberIndex].membershipLevel == 'Silver' || members[memberIndex].membershipLevel == 'Gold') {
-        selection = memberIndex;
-        console.log(selection);
-    } else {
-        selection = 4;
-    }
+    const selection = memberIndex;
+    console.log(selection);
 
     return selection;
 }
 
-const displayMembers = (members, placement) => {    
+const displaySpotlight = (members) => {
+    const msg1 = 'Honesty is the best policy';
+    const msg2 = 'Respect your employees and customers';
+    const msg3 = 'Be transparent in your business practices';
+    const msg4 = 'Be fair in all dealings';
+    const spotlightMsg = [msg1, msg2, msg3, msg4];
+
+    members.forEach((member) => {
+        const spotlightCard = document.createElement('div');
+        spotlightCard.classList.add('card');
+
+        spotlightCard.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="${member.profilePic}" title="${member.name}">
+            <p><span>Daily tip: </span>${spotlightMsg[Math.floor(Math.random() * spotlightMsg.length-1) + 1]}</p>
+            <p>⭐${member.membershipLevel}⭐</p>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>`;        
+        
+        if (spotSelection) {
+            spotSelection.append(spotlightCard);
+        }
+    });
+};
+
+
+const displayMembers = (members) => {    
     members.forEach((member) => {
         const directoryCard = document.createElement('div');
-        directoryCard.innerHTML = `<img src="${member.profilePic}" title="${member.name}">
-                                   <h3>${member.name}</h3>
-                                   <p>⭐${member.membershipLevel}⭐</p>
-                                   <p>${member.address}</p>
-                                   <p>${member.phone}</p>
-                                   <a href="${member.website}" target="_blank">Website</a>`;
-        
-        placement.append(directoryCard);
+        directoryCard.innerHTML = `
+            <img src="${member.profilePic}" title="${member.name}">
+            <h3>${member.name}</h3>
+            <p>⭐${member.membershipLevel}⭐</p>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Website</a>`;
+        if (directory) {       
+            directory.append(directoryCard);
+        }
     });
 };
 
@@ -122,7 +153,9 @@ const displayMembers = (members, placement) => {
 getMemberData(membersUrl);
 
 // Toggle List/Grid view directory
-dirToggle.addEventListener('click', toggleDirectoryView);
+if (dirToggle) {
+    dirToggle.addEventListener('click', toggleDirectoryView);
+}
 
 function toggleDirectoryView() {
     if (dirToggle.textContent == 'List View') {

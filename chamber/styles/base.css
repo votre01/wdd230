@@ -145,7 +145,21 @@ main .mainContent {
     height: auto;
 }
 
-.card p,
+.card p {
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+.card span {
+    font-weight: 700;
+    color: var(--accent2)
+}
+
+.card p:first-of-type {
+    font-family: var(--heading-font);
+    color: var(--accent2)
+}
+
 .card h3,
 .card h4,
 .card h5 {

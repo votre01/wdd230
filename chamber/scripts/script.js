@@ -6,6 +6,9 @@ const welcomeMessage = document.querySelector('#welcomeMessage');
 const currentDate = new Date();
 const msToDays = 84600000;
 
+const currentYear = document.querySelector('#year');
+const lastModified = document.querySelector('#lastModified');
+
 const closeAd = document.querySelector('#closeAd');
 const banner = document.querySelector('#bann');
 const currentEvents = document.querySelector('#currentEvents');
@@ -189,7 +192,8 @@ function toggleDirectoryView() {
 // Local Storage
 const now = new Date();
 const timestampField = document.querySelector("#timestamp");
-timestampField.value = now.toISOString();
+if (timestampField)
+    timestampField.value = now.toISOString();
 
 // Store latest visit date on local storage
 if (!localStorage.getItem('lastV')) {
@@ -202,10 +206,13 @@ if (!localStorage.getItem('lastV')) {
     console.log(lastVisited);
     console.log(currentDate);
 
-    if (daysSinceVisit < 1) {
-        welcomeMessage.textContent = 'Back so soon! Awesome!';        
-    } else {
-        welcomeMessage.textContent = `You last visited ${daysSinceVisit} days ago.`;
+    
+    if (welcomeMessage) {
+        if (daysSinceVisit < 1) {
+            welcomeMessage.textContent = 'Back so soon! Awesome!';        
+        } else {
+            welcomeMessage.textContent = `You last visited ${daysSinceVisit} days ago.`;
+        }
     }
       
     localStorage.setItem('lastV', (currentDate));
@@ -214,3 +221,6 @@ if (!localStorage.getItem('lastV')) {
 function getLastVisitDate() {
     return localStorage.getItem('lastV');
 }
+
+currentYear.innerText = new Date().getFullYear();
+lastModified.innerText = `Last modified: ${document.lastModified}`;

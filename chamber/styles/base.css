@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 :root {
-    --main-color: #040F16;
+    --main-color: #040f16;
     --secondary-color: #0B4F6C;
     --accent1: #01BAEF;
     --accent2: #B80C09;
@@ -114,6 +114,10 @@ header h1 {
 /*
  * Main content sections styling
  */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
 
 .hero img {
     width: 100%;
@@ -122,6 +126,67 @@ header h1 {
 main .mainContent {
     max-width: 90%;
     margin: 0 auto;
+}
+
+.hero .cta {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    max-width: 80%;
+    color: var(--accent3);
+    padding: 1rem;
+    background-color: rgba(4, 15, 22, .4);
+    border-radius: .4rem;
+}
+
+.hero .cta h2 {
+    display: none;
+}
+
+.hero .cta p {
+    font-size: .6rem;
+    padding: .2rem
+}
+
+.hero .cta a {
+    background-color: var(--secondary-color);
+    font-size: .4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--accent3);
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-bottom: .2rem;
+}
+
+.mainContent .banner {
+    background-color: var(--secondary-color);
+    color: var(--accent3);
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+.banner .time {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent3);
+}
+
+.banner {
+    position: relative;
+}
+
+.banner a {
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    text-decoration: none;
+    color: var(--accent3);
+}
+
+.hideBanner {
+    display: none;
 }
 
 .card {
@@ -152,12 +217,12 @@ main .mainContent {
 
 .card span {
     font-weight: 700;
-    color: var(--accent2)
+    color: var(--secondary-color)
 }
 
 .card p:first-of-type {
     font-family: var(--heading-font);
-    color: var(--accent2)
+    color: var(--secondary-color);
 }
 
 .card h3,
@@ -306,7 +371,7 @@ form datalist {
 #dirToggle {
     display: flex;
     width: 10%;
-    background-color: var(--accent2);
+    background-color: var(--main-color);
     margin: 1rem 0;
     padding: .5rem;
     color: var(--accent3);
@@ -350,7 +415,7 @@ form datalist {
     text-align: center;
     text-decoration: none;
     color: var(--accent3);
-    background-color: var(--accent2);
+    background-color: var(--main-color);
     width: 100%;
     padding: 1rem;
     margin: 1rem 0 0 0;
@@ -387,7 +452,7 @@ form datalist {
 
 .dirList a {
     text-decoration: none;
-    color: var(--accent1);
+    color: var(--accent3);
 }
 
 .dirList a:hover {

@@ -6,6 +6,11 @@ const welcomeMessage = document.querySelector('#welcomeMessage');
 const currentDate = new Date();
 const msToDays = 84600000;
 
+const closeAd = document.querySelector('#closeAd');
+const banner = document.querySelector('#bann');
+const currentEvents = document.querySelector('#currentEvents');
+
+
 const userTitle = document.querySelector('#title');
 const titleMessage = document.querySelector('#titleMessage');
 const regex = /^[a-zA-Z\s-]{7,}$/;
@@ -39,6 +44,18 @@ function checkSame() {
 		userTitle.style.backgroundColor = "#fff";
 		userTitle.style.color = "#000";
 	}
+}
+
+// Close ad banner
+
+if (closeAd)
+    closeAd.addEventListener('click', closeAdBanner);
+
+function closeAdBanner() {
+    bann.classList.remove('banner');
+    bann.classList.add('hideBanner');
+    currentEvents.classList.remove('info');
+    currentEvents.classList.add('infoExpand');
 }
 
 // Get weather
@@ -142,7 +159,7 @@ const displayMembers = (members) => {
             <p>⭐${member.membershipLevel}⭐</p>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Website</a>`;
+            <a href="${member.website}" target="_blank">🌐Website</a>`;
         if (directory) {       
             directory.append(directoryCard);
         }
